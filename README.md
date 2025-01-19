@@ -12,4 +12,8 @@ Review Python basics (variables, loops, conditions, functions).
 Understand Python’s role in ethical hacking.
 Install Python libraries commonly used in hacking, such as socket, os, sys, and requests.
 
+## week 3: Setting up Your Hacking Lab
+Set up a virtual machine or use platforms like Kali Linux or Parrot OS for ethical hacking.
+Install Python and required libraries for ethical hacking on Kali or your chosen OS.
+
 
