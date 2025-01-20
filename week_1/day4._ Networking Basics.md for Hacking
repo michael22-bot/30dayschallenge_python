@@ -1,1 +1,87 @@
+To understand networking basics for hacking, it's crucial to learn the fundamentals of TCP/IP, ports, DNS, and HTTP, as they form the foundation of communication across networks. Below is an overview of each topic and an example Python script that checks open ports on a remote server.
 
+### **1. TCP/IP (Transmission Control Protocol / Internet Protocol)**
+
+TCP/IP is the basic communication language or protocol of the internet. It breaks down data into packets, ensures it is delivered to the correct destination, and handles errors in the process.
+
+- **TCP (Transmission Control Protocol)**: A connection-oriented protocol. It guarantees delivery of data in the correct order.
+- **IP (Internet Protocol)**: Responsible for addressing and routing packets to their destination.
+
+### **2. Ports**
+
+Ports are logical endpoints for communication in a network. When a computer connects to the internet or another device, it communicates via a specific port number. Some common well-known ports include:
+
+- **80**: HTTP (Hypertext Transfer Protocol)
+- **443**: HTTPS (Secure HTTP)
+- **21**: FTP (File Transfer Protocol)
+- **22**: SSH (Secure Shell)
+- **25**: SMTP (Simple Mail Transfer Protocol)
+
+Each service or application on a device typically listens to a specific port for incoming connections.
+
+### **3. DNS (Domain Name System)**
+
+DNS translates domain names (e.g., `www.example.com`) into IP addresses (e.g., `192.0.2.1`). It acts like a phone book for the internet, mapping human-readable addresses to machine-readable addresses.
+
+### **4. HTTP (Hypertext Transfer Protocol)**
+
+HTTP is the protocol used to load web pages using hyperlinks. When a user accesses a website, their browser sends HTTP requests to the web server, which responds with HTTP responses containing HTML, CSS, JavaScript, and other content.
+
+---
+
+### **Python Networking Basics with the `socket` Library**
+
+The `socket` library in Python provides low-level networking interfaces and allows you to create connections, send and receive data, and work with protocols like TCP/IP.
+
+### **Example Script: Checking Open Ports on a Remote Server**
+
+This Python script will check if certain ports are open on a remote server.
+
+```python
+import socket
+
+# Function to check if a port is open on a given host
+def check_port(host, port):
+    try:
+        # Create a socket object and attempt to connect to the given port
+        sock = socket.create_connection((host, port), timeout=1)
+        print(f"Port {port} is OPEN on {host}")
+        sock.close()  # Close the socket connection
+    except (socket.timeout, socket.error):
+        print(f"Port {port} is CLOSED on {host}")
+
+# Host to check
+host = "example.com"  # Replace with the target domain or IP
+# List of ports to check
+ports = [21, 22, 23, 80, 443, 8080]
+
+# Check each port
+for port in ports:
+    check_port(host, port)
+```
+
+### **How It Works:**
+
+1. The `check_port()` function tries to create a socket connection to the given host and port.
+2. If the connection succeeds, it means the port is open, and the message will print.
+3. If the connection fails (either due to a timeout or other error), it prints that the port is closed.
+
+### **Steps to Run the Script:**
+1. Install Python (if not already installed).
+2. Save the script as `check_ports.py`.
+3. Run the script in your terminal:
+
+   ```bash
+   python check_ports.py
+   ```
+
+4. It will display whether the specified ports are open or closed on the given host.
+
+---
+
+### **Important Notes:**
+
+- **Legality**: Always get permission before performing any network scanning or penetration testing. Unauthorized scanning can be illegal and considered unethical.
+- **Firewall**: Sometimes, the firewall on a target machine or network can block port checks, even if the service is running.
+
+This script can help you understand basic networking concepts, such as port scanning, and how to interact with remote servers using Python. Let me know if you need further details or explanations!
