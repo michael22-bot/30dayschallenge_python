@@ -15,10 +15,17 @@ Install Python libraries commonly used in hacking, such as socket, os, sys, and 
 ## week 3: Setting up Your Hacking Lab
 Set up a virtual machine or use platforms like Kali Linux or Parrot OS for ethical hacking.
 Install Python and required libraries for ethical hacking on Kali or your chosen OS.
+
 ## week 4: Networking Basics for Hacking
 Learn about TCP/IP, ports, DNS, and HTTP.
 Practice with socket library to understand how Python can be used for network communication.
 Write a Python script to check open ports on a remote server.
+
+## Day 5: Understanding HTTP Requests
+Learn about HTTP methods (GET, POST, PUT, DELETE).
+Use Python's requests library to interact with web servers and make requests.
+Write a script to fetch a webpage and display the status code and headers.
+
 
 
 
