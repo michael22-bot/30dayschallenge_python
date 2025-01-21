@@ -26,6 +26,10 @@ Learn about HTTP methods (GET, POST, PUT, DELETE).
 Use Python's requests library to interact with web servers and make requests.
 Write a script to fetch a webpage and display the status code and headers.
 
+## Day 6: Introduction to Nmap and Python
+Learn about network scanning with Nmap.
+Use Python to interact with Nmap (python-nmap library).
+
 
 
 
