@@ -30,6 +30,11 @@ Write a script to fetch a webpage and display the status code and headers.
 Learn about network scanning with Nmap.
 Use Python to interact with Nmap (python-nmap library).
 
+## HandDas-on Practice
+Practice writing Python scripts for scanning local networks for open ports and web services.
+Implement basic vulnerability scanning with Python and Nmap.
+
+
 
 
 
